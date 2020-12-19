@@ -1,44 +1,16 @@
-// //定义默认字体大小(根据实际情况自由调整)
-// $browser-default-font-size:37.5px!default;//iphone6
-// html,body{
-//     font-size:$browser-default-font-size;
-// }
-// @function px2rem($px){
-//     @return $px/$browser-default-font-size*1rem;
-// }
-*{
-    margin: 0;
-    padding: 0;
-    outline-style: none;
-}
-.fl{
-    float: left;
-}
-.fr{
-    float: right;
-}
-li{
-    list-style: none;
-}
-.clearfix::before{
-    clear: both;
-    display: block;
-    content: '.';
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-.clearfix::after{
-    clear: both;
-    display: block;
-    content: '.';
-    width: 0;
-    height: 0;
-    visibility: hidden;
-}
-.clearfix::before,.clearfix::after{
-    *zoom:1;
-}
-.ivu-layout-header{
-    background:transparent;
-}
+html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, form, label, input, legend, table, caption, tbody, tfoot, thead, tr, th, td, textarea, article, aside, audio, canvas, figure, footer, header, mark, menu, nav, section, time, video { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal }
+article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote { display: block; }
+ul, ol { list-style: none; }
+img { border: 0 none; vertical-align: top; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+strong, em, i { font-style: normal; font-weight: normal; }
+ins { text-decoration: underline; }
+del { text-decoration: line-through; }
+mark { background: none; }
+input::-ms-clear { display: none !important; }
+body { font: 14px/1.5 \5FAE\8F6F\96C5\9ED1, \5B8B\4F53, "Hiragino Sans GB", STHeiti, "WenQuanYi Micro Hei", "Droid Sans Fallback", SimSun, sans-serif; background: #fff; }
+a { text-decoration: none; color: #333; }
+a:hover { text-decoration: underline; }
