@@ -28,8 +28,10 @@ const obj = {
             console.log('请求前');
             return data;
         },error=>{
-            loadinginstace.close();//失败关闭加载窗
-            return Promise.reject(error);
+            // loadinginstace.close();//失败关闭加载窗
+            return new Promise((res,rej)=>{
+                res(error);
+            });
         });
         if(type.toUpperCase()=='GET'||type.toUpperCase()=='DELETE'){
             // console.log(params)
@@ -47,7 +49,7 @@ const obj = {
                 }).then(response=>{
                     resolve(response.data)
                 }).catch(err=>{
-                    reject(err)
+                    reject(err.response)
                 });
             })
         }else if(type.toUpperCase()=='POST'||type.toUpperCase()=='PUT'){
@@ -65,7 +67,7 @@ const obj = {
                 }).then(response=>{
                     resolve(response.data)
                 }).catch(err=>{
-                    reject(err);
+                    reject(err.response)
                 });
             });
         };
